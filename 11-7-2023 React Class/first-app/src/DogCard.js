@@ -1,12 +1,25 @@
 import Image from "./Image";
+import Name from "./Name";
 
-
-function DogCard(){
+function DogCard(props){
+    let title="This is a dog card"
     return(
-        <div>
-            <h3>Bruno</h3>
-            <Image/>
-        </div>
+        <>
+                <h2 style={
+                        {
+                            fontSize:"45px",
+                            color:"red"
+                        }
+                    }>
+                {title}
+                </h2>
+            <Name>
+                <h3>{props.name}</h3>
+
+            </Name>
+            <Image src={props.image}/>
+            
+        </>
     );
 }
 
